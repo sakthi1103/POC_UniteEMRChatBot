@@ -17,8 +17,8 @@ PINECONE_INDEX_NAME = os.getenv("PINECONE_INDEX_NAME")
 # --------------------------------
 # UI (must be first Streamlit calls)
 # --------------------------------
-st.set_page_config(page_title="📘 UniteEMR Assist", layout="wide")
-st.title("📘 UniteEMR Assist")
+st.set_page_config(page_title="UniteEMR Assist", layout="wide")
+st.title("UniteEMR Assist")
 # --------------------------------
 # Cached backend objects (NO st.* inside)
 # --------------------------------
@@ -61,5 +61,6 @@ if question:
     with st.expander("📚 Source URLs"):
         for doc in result["source_documents"]:
             st.write(doc.metadata.get("source"))
+
 
 
