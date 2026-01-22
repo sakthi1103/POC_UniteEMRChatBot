@@ -19,8 +19,6 @@ PINECONE_INDEX_NAME = os.getenv("PINECONE_INDEX_NAME")
 # --------------------------------
 st.set_page_config(page_title="📘 UniteEMR Docs Chatbot", layout="wide")
 st.title("📘 UniteEMR Documentation Chatbot")
-st.success("✅ App loaded successfully")
-
 # --------------------------------
 # Cached backend objects (NO st.* inside)
 # --------------------------------
@@ -63,3 +61,4 @@ if question:
     with st.expander("📚 Source URLs"):
         for doc in result["source_documents"]:
             st.write(doc.metadata.get("source"))
+
